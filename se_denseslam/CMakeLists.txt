@@ -8,6 +8,9 @@ endif(APPLE)
 
 find_package(Eigen3 REQUIRED)
 find_package(Sophus REQUIRED)
+
+SET(SOPHUS_INCLUDE_DIR /home/a/Programming/Sophus)
+
 if(WITH_OPENMP)
   find_package(OpenMP)
   if(OPENMP_FOUND)
@@ -18,7 +21,7 @@ endif()
 set(appname ${PROJECT_NAME})
 
 
-# ---- PREPARE COMMON DEPENDENCIES  ------------ 
+# ---- PREPARE COMMON DEPENDENCIES  ------------
 set(compile_flags  -Wall -Wextra -Wno-unknown-pragmas)
 set(libraries lodepng se_shared se_core)
 
